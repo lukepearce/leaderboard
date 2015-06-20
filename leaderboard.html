@@ -9,19 +9,28 @@
 </body>
 
 <template name="leaderboard">
-	<h2>Selected Player: {{ showSelectedPlayer.name }}</h2>
+	<h3>Selected Player: {{ showSelectedPlayer.name }}</h3>
 	<ul class="player__list">
 		{{# each player }}
 			<li class="player {{ selectedClass }}">{{ name }}: {{ score }}</li>
 		{{/ each }}
 	</ul>
 	<input id="scoreAmount" type="text" name="scoreAmount">
-	<input type="button" class="increment" value="give points">
+	<input type="button" class="increment" value="Give Points">
+	<input type="button" class="remove" value="Remove Player">
 </template>
 
 <template name="addPlayerForm"> 
 	<form>
-		<input type="text" name="playerName">
+		<h3>Add a player</h3>
+		<div>
+			<label for="playerName">Name</label>
+			<input type="text" name="playerName">
+		</div>
+		<div>
+			<label for="playerScore">Score</label>
+			<input type="text" name="playerScore">
+		</div>
 		<input type="submit" value="Add Player"> 
 	</form>
 </template>
