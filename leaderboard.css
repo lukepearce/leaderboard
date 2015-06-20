@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+
+.player__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.player--selected {
+	display: inline-block;
+	background: #cad981;
+}
